@@ -1,0 +1,21 @@
+{
+    "name": "ArduinoWiFiConfigOverBLE",
+    "keywords": "wifi, ble",
+    "description": "Library to expose configuration infos for a Arduino based Device via BLE",
+    "homepage": "https://github.com/GuedesPlace/ArduinoWiFiConfigOverBLE",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/GuedesPlace/ArduinoWiFiConfigOverBLE.git"
+    },
+    "version": "1.0.0",
+    "authors": {
+      "name": "Christian Guedemann",
+      "email": "christian@guedesplace.ch"
+    },
+    "dependencies": {
+        "bblanchon/ArduinoJson": "^7.2.0"
+    },
+    "license": "MIT",
+    "frameworks": "arduino",
+    "platforms": "*"
+  }
