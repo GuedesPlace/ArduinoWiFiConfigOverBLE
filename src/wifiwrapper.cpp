@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include <WiFi.h>
-#include "./datatypes.h"
-#include "./wifiwrapper.h"
+#include "./GPWiFiWrapper.h"
+#include "./GPBleWifiStatus.h"
 
 GPWifiWrapper::GPWifiWrapper()
 {

@@ -2,8 +2,8 @@
 #define GPBleWrapper_h
 
 #include <BLEServer.h>
-#include "./datatypes.h"
-#include "./gpconfigurationproperties.h"
+#include "./GPBleWifiStatus.h"
+#include "./GPConfigurationProperties.h"
 
 
 class GPBleWrapper;

@@ -2,7 +2,7 @@
 #define GPBPropertiesCharacteristicCallBack_h
 
 #include <BLECharacteristic.h>
-#include "../gpblewrapper.h"
+#include "../GPBleWrapper.h"
 #include <ArduinoJson.h>
 
 class PropertiesCharacteristicCallBack : public BLECharacteristicCallbacks

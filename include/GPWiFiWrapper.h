@@ -1,7 +1,7 @@
 #ifndef WifiWrapper_h
 #define WifiWrapper_h
 #include <WiFi.h>
-#include "./datatypes.h"
+#include "./GPBleWifiStatus.h"
 
 class GPWifiStatusCallbacks {
     public:

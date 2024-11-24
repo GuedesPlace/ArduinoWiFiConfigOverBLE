@@ -1,4 +1,4 @@
-#include "./gpconfigurationproperties.h"
+#include "./GPConfigurationProperties.h"
 GPConfigurationProperties::GPConfigurationProperties(int capacity)
 {
     m_capacity = capacity;

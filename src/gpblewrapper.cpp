@@ -3,7 +3,7 @@
 #include <BLE2902.h>
 #include <Arduino.h>
 #include <ArduinoJson.h>
-#include "./gpblewrapper.h"
+#include "./GPBleWrapper.h"
 #include "./callbacks/PropertiesCharacteristicCallBack.h"
 #include "./callbacks/WifiStatusCallback.h"
 

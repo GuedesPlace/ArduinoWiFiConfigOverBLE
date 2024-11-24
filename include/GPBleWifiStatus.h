@@ -1,5 +1,5 @@
-#ifndef DataTypes_h
-#define DataTypes_h
+#ifndef GPBLEWifiStatus_h
+#define GPBLEWifiStatus_h
 enum GPBLE_WIFISTATUS
 {
     UNKNOWN,

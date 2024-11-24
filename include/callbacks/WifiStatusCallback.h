@@ -3,7 +3,7 @@
 
 #include <BLECharacteristic.h>
 #include <ArduinoJson.h>
-#include "../gpblewrapper.h"
+#include "../GPBleWrapper.h"
 
 class WifiStatusCharacteristiCallBack : public BLECharacteristicCallbacks
 {
