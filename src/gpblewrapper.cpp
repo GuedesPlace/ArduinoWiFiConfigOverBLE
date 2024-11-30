@@ -10,7 +10,6 @@
 #define SERVICE_UUID "d01c3000-eb86-4576-a46d-3239440100da"
 #define WIFI_STATUS_CHARACTERISTIC_UUID "d01c3001-eb86-4576-a46d-3239440100da"
 #define WIFI_DEFINITION_CHARACTERISTIC_UUID "d01c3002-eb86-4576-a46d-3239440100da"
-//#define PUBLIC_NAME_CHARACTERISTIC_UUID "d01c3003-eb86-4576-a46d-3239440100da"
 #define PROPERTY_CHARACTERISTIC_UUID "d01c3004-eb86-4576-a46d-3239440100da"
 
 GPBleServerCallbacks::GPBleServerCallbacks(GPBleWrapper *wrapper)
@@ -35,7 +34,6 @@ GPBleWrapper::GPBleWrapper()
     m_wifiStatus = UNKNOWN;
     m_wifiStatusCharacteristic = nullptr;
     m_wifiDefinitionCharacteristic = nullptr;
-    m_publicNameCharacteristic = nullptr;
     m_updateValueCallbacks = nullptr;
 }
 
@@ -87,8 +85,8 @@ void GPBleWrapper::createPropertiesChararcteristic(BLEService *pService)
         PROPERTY_CHARACTERISTIC_UUID,
         BLECharacteristic::PROPERTY_READ | BLECharacteristic::PROPERTY_WRITE | BLECharacteristic::PROPERTY_NOTIFY |
             BLECharacteristic::PROPERTY_INDICATE);
-    m_publicNameCharacteristic->addDescriptor(new BLE2902());
-    m_publicNameCharacteristic->setCallbacks(new PropertiesCharacteristicCallBack(this));
+    m_propertiesCharacteristic->addDescriptor(new BLE2902());
+    m_propertiesCharacteristic->setCallbacks(new PropertiesCharacteristicCallBack(this));
 }
 
 void GPBleWrapper::updateWIFIStatus(GPBLE_WIFISTATUS wifiStatus)

@@ -5,7 +5,6 @@
 #include "./GPBleWifiStatus.h"
 #include "./GPConfigurationProperties.h"
 
-
 class GPBleWrapper;
 
 class GPBleUpdateValueCallbacks
@@ -49,7 +48,6 @@ private:
     GPBLE_WIFISTATUS m_wifiStatus = UNKNOWN;
     BLECharacteristic *m_wifiStatusCharacteristic;
     BLECharacteristic *m_wifiDefinitionCharacteristic;
-    BLECharacteristic *m_publicNameCharacteristic;
     BLECharacteristic *m_propertiesCharacteristic;
     GPBleUpdateValueCallbacks *m_updateValueCallbacks = nullptr;
     void createWifiStatusCharacteristic(BLEService *service);
