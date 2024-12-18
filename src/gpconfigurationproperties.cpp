@@ -2,7 +2,8 @@
 GPConfigurationProperties::GPConfigurationProperties(int capacity)
 {
     m_capacity = capacity;
-    m_propertiesArray = (gpConfigProperty *)malloc(capacity * sizeof(gpConfigProperty));
+    //m_propertiesArray = (gpConfigProperty *)malloc(capacity * sizeof(gpConfigProperty));
+    m_propertiesArray = new gpConfigProperty[capacity];
 }
 int GPConfigurationProperties::getCapacity()
 {
