@@ -19,7 +19,7 @@ public:
         JsonArray docAsArrray = doc.to<JsonArray>();
         if (properties->getCapacity() > 0)
         {
-            for (int x; x < properties->getCapacity(); x++)
+            for (int x=0; x < properties->getCapacity(); x++)
             {
                 JsonObject jsonProperty = docAsArrray.add<JsonObject>();
                 gpConfigProperty property = properties->getProperty(x);
@@ -39,7 +39,7 @@ public:
         deserializeJson(doc, value);
         if (!doc.isNull())
         {
-            JsonArray docAsArrray = doc.to<JsonArray>();
+            JsonArray docAsArrray = doc.as<JsonArray>();
             GPConfigurationProperties* properties = new GPConfigurationProperties(docAsArrray.size());
             int counter = 0;
             for (JsonVariant content : docAsArrray)
