@@ -34,28 +34,16 @@ public:
     }
     void onWrite(BLECharacteristic *pCharacteristic)
     {
-        Serial.print("Deserialize");
         String value = pCharacteristic->getValue().c_str();
-        Serial.print(value);
         JsonDocument doc;
         deserializeJson(doc, value);
         if (!doc.isNull())
         {
             JsonArray docAsArrray = doc.as<JsonArray>();
             GPConfigurationProperties* properties = new GPConfigurationProperties(docAsArrray.size());
-            Serial.print("Deserialize");
-            Serial.print(docAsArrray.size());
             int counter = 0;
             for (JsonVariant content : docAsArrray)
             {
-                Serial.print("CHECK: "+counter);
-                String key = content["key"];
-                String label = content["label"];
-                String value = content["value"];
-                Serial.print(key);
-                Serial.print(label);
-                Serial.print(value);
-                
                 gpConfigProperty property = {content["key"],content["label"],content["value"]};
                 properties->setProperty(property, counter);
                 counter++;
