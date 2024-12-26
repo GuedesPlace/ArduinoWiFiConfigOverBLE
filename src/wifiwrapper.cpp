@@ -6,6 +6,7 @@
 GPWifiWrapper::GPWifiWrapper()
 {
     m_status = UNKNOWN;
+    m_lastStatus = WL_DISCONNECTED;
     m_callbacks = nullptr;
 }
 void GPWifiWrapper::setup(String deviceName)
