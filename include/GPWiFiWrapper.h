@@ -18,6 +18,7 @@ public:
     void registerWifiStatusCallbacks(GPWifiStatusCallbacks* callbacks);
     void checkStatus();
     bool isConnected();
+    String getMacAddress();
 
 private:
     void updateStatusByWifiStatus(wl_status_t newStatus);

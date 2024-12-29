@@ -91,3 +91,7 @@ void GPWifiWrapper::updateStatusByWifiStatus(wl_status_t newStatus)
 bool GPWifiWrapper::isConnected() {
     return WiFi.status() == WL_CONNECTED;
 }
+String GPWifiWrapper::getMacAddress()
+{
+    return WiFi.macAddress();
+}
